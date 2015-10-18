@@ -9,7 +9,8 @@ get '/messages' do
 end
 
 get '/messages/new' do
- erb :'messages/new'
+  @message = Message.new
+  erb :'messages/new'
 end
 
 get '/messages/:id' do
